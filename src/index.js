@@ -6,18 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 import {UserProvider} from "./context/user.context";
 import {CategoriesProvider} from "./context/categories.context";
-import {CartIconProvider} from "./context/cart.context";
+import {CartProvider} from "./context/cart.context";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <UserProvider>
-                <CartIconProvider>
+                <CartProvider>
                     <CategoriesProvider>
                         <App/>
                     </CategoriesProvider>
-                </CartIconProvider>
+                </CartProvider>
             </UserProvider>
         </BrowserRouter>
     </React.StrictMode>
